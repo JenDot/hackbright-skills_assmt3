@@ -1,3 +1,4 @@
+from flask import render_template
 from flask import Flask, redirect, request, render_template, session
 from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
@@ -41,7 +42,16 @@ MOST_LOVED_MELONS = {
 }
 
 
-# REPLACE THIS WITH YOUR ROUTES
+"""Write a route, /top-melons, that renders the template top-melons.html.
+    At the top of server.py, there is a dictionary of 4 melons called MOST_LOVED_MELONS. Those are the melons to display.
+    The route /top-melons should render the template top-melons.html and pass through the MOST_LOVED_MELONS dictionary to Jinja.
+"""
+
+
+@app.route('/top-melons')
+def top_melons():
+
+    return render_template("top-melons.html", melons=MOST_LOVED_MELONS)
 
 
 if __name__ == '__main__':

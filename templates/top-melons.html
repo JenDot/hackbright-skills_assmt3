@@ -1,21 +1,33 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Top Melons</title>
   <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
+
 <body>
   <!-- Create a div for every Most Loved Melon using a Jinja for-loop -->
-  <div class="melon-div">
-    <ul>
-      {% for melon in MOST_LOVED_MELONS.items() %}
-        <li> <img src="{{ img }}" alt="">{{ name }} has {{ num_loves }}</li>
-      {% endfor %}
+  <!-- write a Jinja FOR loop to create divs for all of the melons in the MOST_LOVED_MELONS dictionary. Do not hardcode the
+    information for any of the melons in the template. Make sure that for each melon, the template displays:
+      * the melon’s name
+      * the melon’s num_loves (number of times it’s been loved)
+      * the melon’s image -->
+  {% for melon in melons.values() %}
+  img = melon['img']
+  name = melon['name']
+  num_loves = melon['num_loves']
 
-    </ul>
-    <h3>{name}</h3>
-    <h2>Loved 598 times.</h2>
-    <img src="http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg">
+  <div class="melon-div">
+    <img src={{img}} alt="Picture of a " {{name}}>
+    <h1>{{name}}
+    </h1>
+    <h2>{{num_loves}} people love this melon!
+    </h2>
+
   </div>
+  {% endfor %}
+
 </body>
+
 </html>
