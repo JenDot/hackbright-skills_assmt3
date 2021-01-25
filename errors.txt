@@ -20,3 +20,13 @@ flask.cli.NoAppException: Could not locate a Flask application. You did not prov
 127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
 127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+
+
+Asked Kat about these errors and why Flask isn't working.  Her reply:
+KatToday at 5:51 PM
+Are you on windows? Did you do the —always-copy thing? I’m not sure what’s going on. Make sure you do what you can, and leave notes in comments for the grader, and send Andrew a message to know what’s up. Is this the first time you’re running a flask app from this computer?
+
+Keiva (Jen Doty)Today at 5:55 PM
+I'm on Ubuntu, I don't know what you mean by always-copy, and yes, first time on this comp
+
+Notified Andrew.

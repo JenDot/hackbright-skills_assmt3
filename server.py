@@ -68,13 +68,21 @@ def get_name():
 """Write a route, /top-melons, that renders the template top-melons.html.
     At the top of server.py, there is a dictionary of 4 melons called MOST_LOVED_MELONS. Those are the melons to display.
     The route /top-melons should render the template top-melons.html and pass through the MOST_LOVED_MELONS dictionary to Jinja.
+
+    At the route /top-melons, check first to see if there is a name stored in the session already. If there is, render the template
+    top-melons.html. If there isn’t a ‘name’ key in the session, redirect back to the homepage.
+    Similarly, if a user has already entered their name and it’s been stored in the session, we don’t need them to ever see the
+    homepage where we ask them for their name again. So, you can update the homepage route at / to check to see if a name is in
+    the session, and if so, to redirect to the /top-melons route.
 """
 
 
 @app.route("/top-melons")
 def top_melons():
-
-    return render_template("top-melons.html", melons=MOST_LOVED_MELONS)
+    if session["person"]:
+        return render_template("top-melons.html", melons=MOST_LOVED_MELONS)
+    else:
+        return redirect("/")
 
 
 if __name__ == "__main__":

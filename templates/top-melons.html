@@ -12,8 +12,11 @@
 <head>
   <title>Top Melons</title>
   <link rel="stylesheet" type="text/css" href="/static/styles.css">
-  <h1>Welcome, {{ session["person"] }}!</h1>
+  <h1 class="heading">Welcome, {{ session["person"] }}!</h1>
 </head>
+
+{% extends "base.html"}
+{% block page-color}
 
 <body>
   <!-- Create a div for every Most Loved Melon using a Jinja for-loop -->
@@ -28,14 +31,14 @@
   num_loves = melon['num_loves']
 
   <div class="melon-div">
-    <img src={{img}} alt="Picture of a " {{name}}>
+    <img class="image" src={{img}} alt="Picture of a melon">
     <p>{{name}}</p>
 
     <p>{{num_loves}} people love this melon!</p>
 
   </div>
   {% endfor %}
-
+  {%endblock%}
 </body>
 
 </html>
