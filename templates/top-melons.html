@@ -1,9 +1,18 @@
 <!doctype html>
 <html>
+<!--Update the top-melons.html template:
+    * Add a <h1> heading that says welcome and the person’s name. So, if Balloonicorn was on the site and had entered her name
+      on the homepage, the top melons page should display Welcome, Balloonicorn in a heading.
+    * We’ll also display the user’s name along with each melon name. Update the <h3> header that is currently displaying
+      just the melon name. Instead of just listing the melon’s name, make the text in the <h3> header look like this:
+      Balloonicorn, this is a Crenshaw (so it should display the user’s name followed by “this is a ” and the name of
+      the melon).-->
+
 
 <head>
   <title>Top Melons</title>
   <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  <h1>Welcome, {{ session["person"] }}!</h1>
 </head>
 
 <body>
@@ -20,10 +29,9 @@
 
   <div class="melon-div">
     <img src={{img}} alt="Picture of a " {{name}}>
-    <h1>{{name}}
-    </h1>
-    <h2>{{num_loves}} people love this melon!
-    </h2>
+    <p>{{name}}</p>
+
+    <p>{{num_loves}} people love this melon!</p>
 
   </div>
   {% endfor %}

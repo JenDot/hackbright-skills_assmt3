@@ -1,0 +1,22 @@
+Errors received when running in FF.  Asked for help in Discord, but no one was available.
+
+ * Debugger PIN: 253-080-522
+127.0.0.1 - - [24/Jan/2021 15:57:56] "GET / HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/cli.py", line 325, in __call__
+    self._flush_bg_loading_exception()
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/cli.py", line 313, in _flush_bg_loading_exception
+    reraise(*exc_info)
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/cli.py", line 302, in _load_app
+    self._load_unlocked()
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/cli.py", line 317, in _load_unlocked
+    self._app = rv = self.loader()
+  File "/home/keiva/src/skills-assmt-3/env/lib/python3.8/site-packages/flask/cli.py", line 383, in load_app
+    raise NoAppException(
+flask.cli.NoAppException: Could not locate a Flask application. You did not provide the "FLASK_APP" environment variable, and a "wsgi.py" or "app.py" module was not found in the current directory.
+127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jan/2021 15:57:57] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
