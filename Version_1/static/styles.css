@@ -1,0 +1,23 @@
+/*Let’s make the page more melon-y.
+    Make the page background a pale canteloupe color.
+    Make the headings a sans-serif font in red.
+    Add a green border to the images on the top-melons page.
+    On the homepage, center the melon image on the page.*/
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(171, 0, 0)
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-color: rgb(112, 211, 112);
+  text-align: center;
+}
+
+.melon-div {
+  display: inline-block;
+  padding: 10px;
+  width: 205px;
+}
