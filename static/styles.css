@@ -1,10 +1,27 @@
-img {
+.image {
+  display: block;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
   height: 200px;
   width: 200px;
+  border: solid green 2px;
+  border-radius: 25px;
 }
 
 .melon-div {
   display: inline-block;
   padding: 10px;
   width: 205px;
+}
+
+body {
+  background-color:rgb(255,228,153)
+  /* This bg color is the outside of a canteloupe.  Sorta :) */
+}
+
+heading {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(217, 13, 0);
+  text-shadow: 2px 2px 5px lightgrey;
 }
